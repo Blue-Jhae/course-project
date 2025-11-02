@@ -1,0 +1,45 @@
+/* Colors to use: Different Shades of Blue, Black, White. Colors of a Blue Jay. */
+html {
+    margin: 0;
+    padding: 0;
+    /* simple reset */
+    scroll-behavior: smooth;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+nav.topnav {
+    display: flex;
+    align-items: center;
+    background-color:  rgb(190, 237, 255);
+    height: 120px;
+    position: sticky;
+    padding: 0 20px;
+}
+    nav.topnav img {
+        width: 160px;
+    }
+    nav.topnav ul {
+        display: flex;
+        list-style: none;
+        gap: 14px;
+        padding: 16px;
+    }
+        nav.topnav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            display: block;
+            padding: 10px 16px;
+            background-color: whitesmoke;
+            border-radius: 12px 12px 12px 12px;
+        }
+        nav.topnav ul li a:hover {
+            background-color: whitesmoke;
+    /* plan for later: make them look like buttons being pressed on hover */
+            color: black;
+            text-shadow: none;
+        }
