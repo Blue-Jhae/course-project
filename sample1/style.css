@@ -1,0 +1,146 @@
+@font-face {
+    font-family: minecraft;
+    src: url(Minecraft.ttf);
+}
+
+html {
+    background-color: black;
+    margin: 0;
+    font-family: minecraft, monospace;
+    text-align: center;
+    color: white;
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+    body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/clock-rabbit.png);
+    background-color: rgba(0, 0, 0, 0.4);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    filter: blur(3px);
+    background-blend-mode: overlay;
+}
+
+.analog-clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45rem;
+    height: 45rem;
+    border: 12px solid white;
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px rgb(0, 0, 0, 0.5),
+    0 0 10px rgb(0, 0, 0, 0.2);
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform:translateY(-3px);
+}
+
+.hand {
+    width: 45%;
+    height: 8px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.2s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.button {
+    width: 5%;
+    height: 5%;
+    position: absolute;
+    top: 48%;
+    left: 47.5%;
+    border-radius: 100px;
+    background: rgb(207, 0, 0);
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.button-hole {
+    width: 3.5%;
+    height: 3.5%;
+    position: absolute;
+    top: 48.75%;
+    left: 48.25%;
+    border-radius: 100px;
+    background: white;
+}
+
+.hr-hand {
+    width: 30%;
+    left: 20%;
+}
+
+.sec-hand {
+    width: 48%;
+    height: 4px;
+    left: 1.95%;
+    background-color: rgb(207, 0, 0);
+}
+
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.digital-clock {
+    font-size: 4rem;
+    margin-top:2rem;
+    text-shadow: 3px 3px 4px black;
+}
+
+/* Prevents the clock from turning the wrong way when resetting to 0 */
+.no-transition {
+    transition: none !important;
+}
+
+.back-to-gallery {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #4fa2d9;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 1000;
+}
+    .back-to-gallery:hover {
+        background-color: #3b87c1;
+        transform: translateY(-2px);
+    }
+    .back-to-gallery:active {
+        transform: translateY(1px);
+        box-shadow: inset 1px 1px 3px rgba(0,0,0,0.3);
+    }

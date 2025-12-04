@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Jhae Webnests - Reviews</title>
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+    <header>
+        <nav class="topnav">
+            <a href="../home/index.html" class="logo-link">
+                <img src="../images/logo.png" alt="Blue Jhae WebNests">
+            </a>
+
+            <ul>
+                <li><a href="../home/index.html">Home</a></li>
+                <li><a href="../home/index.html#gallery">Gallery</a></li>
+                <li><a href="../reviews/index.html">Reviews</a></li>
+                <li><a href="../contact/index.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+     <main>
+        <h1>Client Reviews</h1>
+        <p>Read what previous clients have said or submit your own review!</p>
+
+        <form id="reviewForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="text" name="project" placeholder="Project Type" required>
+
+            <div class="star-rating">
+                <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars">★</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars">★</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars">★</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">★</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">★</label>
+            </div>
+
+            <textarea name="comment" placeholder="Your Review" required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Project</th>
+                    <th>Rating</th>
+                    <th>Comment</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+
+            <tbody id="reviewsTableBody">
+                <!-- Reviews inserted by JS -->
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th colspan="5"></th>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+
+    <footer>
+        <div class="footer-grid footer-container">
+            <div class="footer-brand">
+                <h2>Blue Jhae WebNests</h2>
+                <p>Designing clean, friendly, functional pages, one nest at a time.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../home/index.html">Home</a></li>
+                    <li><a href="../home/index.html#gallery">Portfolio</a></li>
+                    <li><a href="../reviews/index.html">Reviews</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Info</h3>
+                <p>Email: <a href="mailto:jhedryc.pancho@my.marianas.edu">jhedryc.pancho@my.marianas.edu</a></p>
+                <p>Phone: <a href="tel:+16702855966">+1 (670) 285-5966</a></p>
+                <p>Location: Saipan, CNMI</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Blue Jhae WebNests. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/click.js"></script>
+    <script src="../js/reviews.js"></script>
+</body>
+</html>
